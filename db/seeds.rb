@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+sets = MTG::Set.all
+sets.map do |set|
+  CardSet.create(
+    name: set.name, code: set.code, 
+    block: set.block, set_type: set.type,
+    release_date: set.release_date)
+end

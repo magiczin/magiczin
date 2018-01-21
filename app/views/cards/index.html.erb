@@ -1,0 +1,8 @@
+<h2>Cards</h2>
+<% @cards.each do |card| %>
+  <p><%= card.name %></p>
+  <img src=<%=card.image_url %>></img>
+  <p><%= card.card_type %></p>
+  <p><%= card.text %></p>
+  <br>
+<% end %>

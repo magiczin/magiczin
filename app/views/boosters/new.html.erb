@@ -1,0 +1,6 @@
+<h2>Generate Booster</h2>
+
+<%= form_for @booster do |f| %>
+  <%= f.collection_select :card_set_id, @sets, :id, :name %>
+  <%= f.submit %>
+<% end %>
