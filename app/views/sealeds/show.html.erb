@@ -1,4 +1,5 @@
-<% @cards.each do |card| %>
-  <%= "1 #{card.name} "%>
+<% @cards.each do |name, quantity| %>
+  <%= quantity %>
+  <%= name %>
   <br />
 <% end %>
