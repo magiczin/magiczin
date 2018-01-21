@@ -1,0 +1,6 @@
+<h2>Generate Sealed</h2>
+
+<%= form_tag controller: :sealeds, action: :create, method: :post do %>
+  <%= select_tag :set_code, options_from_collection_for_select(@sets, :code, :name) %>
+  <%= submit_tag "Get cards" %>
+<% end %>
