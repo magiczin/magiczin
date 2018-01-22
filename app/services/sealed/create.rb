@@ -1,8 +1,8 @@
 module Sealed
   class Create
-    def self.perform(set_code)
+    def self.perform(sets)
       Hash.new(0).tap do |cards_hash|
-        6.times do
+        sets.map do |set_code|
           booster = Booster.create
           Boosters::CreateCards.perform(set_code, booster)
           booster.cards.map do |card|
