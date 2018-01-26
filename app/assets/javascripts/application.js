@@ -12,5 +12,10 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
 //= require semantic-ui
 //= require_tree .
+
+  $(function(){
+    $('.ui, .dropdown').dropdown();
+  })

@@ -1,5 +1,7 @@
 {
   "name": "mtg_draft",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
 }
