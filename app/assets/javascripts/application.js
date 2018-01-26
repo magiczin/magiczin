@@ -14,6 +14,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require semantic-ui
+//
+//
+//= require cards
 //= require_tree .
 
   $(document).on('turbolinks:load', function(){

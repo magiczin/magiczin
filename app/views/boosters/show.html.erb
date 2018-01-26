@@ -1,5 +1,6 @@
-<div style='float: right; padding-top: 15px'>
-  <%= link_to 'Exportar para TXT', export_booster_path(@booster) %>
-</div>
-
-<%= render 'common/card', cards: @booster.cards %>
+<%= form_for @booster, url: export_booster_path(@booster), method: 'post' do |f| %>
+  <div style='float: right; padding-top: 15px'>
+    <%= submit_tag 'Exportar para TXT' %>
+  </div>
+  <%= render 'common/card', cards: @booster.cards %>
+<% end %>

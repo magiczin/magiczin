@@ -15,7 +15,7 @@ class SealedsController < ApplicationController
   end
 
   def export
-    cards = Card.where(sealed_id: params[:id])
+    cards = Card.where(id: cards_for_export)
     @cards = Exporters::Text.perform(cards)
 
     render 'common/export'
@@ -29,5 +29,11 @@ class SealedsController < ApplicationController
         card_sets << params.send("[]", "set#{i+1}")
       end
     end
+  end
+
+  def cards_for_export
+    params.keys.map do |key|
+      key.gsub("checkbox_", "")
+    end 
   end
 end

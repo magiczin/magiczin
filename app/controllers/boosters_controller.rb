@@ -17,7 +17,7 @@ class BoostersController < ApplicationController
   end
 
   def export
-    cards = Card.where(booster_id: params[:id])
+    cards = Card.where(id: cards_for_export)
     @cards = Exporters::Text.perform(cards)
 
     render 'common/export'
@@ -28,5 +28,11 @@ class BoostersController < ApplicationController
   def booster_params
     params.require(:booster).permit(:card_set_id) 
     params[:booster]
+  end
+
+  def cards_for_export
+    params.keys.map do |key|
+      key.gsub("checkbox_", "")
+    end 
   end
 end

@@ -4,7 +4,8 @@
       <div class='card' id=<%= "card_#{card.id}" %> data-id=<%= card.id %>>
         <a href=<%= card.multiverse_url %>><%= "#{card.name} #{card.mana_cost}"%></a>
         <p class='card-type'><%= card.card_type %></p>
-        <img src=<%=card.image_url %>></img>
+        <%= image_tag card.image_url, id: "image_#{card.id}", class: 'card-image' %>
+        <%= check_box_tag "checkbox_#{card.id}", '1', true, class: 'hidden', 'data-id': card.id %>
       </div>
     </div>
   <% end %>
