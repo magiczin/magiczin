@@ -1,6 +1,6 @@
 class CardsController < ApplicationController
   def index
-    @cards = scope.cards
+    @cards = scope.cards.order(:colors, :cmc, :name)
   end
 
   private
