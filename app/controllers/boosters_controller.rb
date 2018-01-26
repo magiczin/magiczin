@@ -7,7 +7,7 @@ class BoostersController < ApplicationController
   def show
     @booster = Booster.find(params[:id])
 
-    redirect_to booster_cards_path(@booster)
+    redirect_to cards_path(scope: "Booster", scope_id: params[:id])
   end
 
   def create

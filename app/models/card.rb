@@ -1,6 +1,8 @@
 class Card < ApplicationRecord
   MULTIVERSE_CARD_BASE_URL = "http://gatherer.wizards.com/Pages/Card/Details.aspx".freeze
+
   belongs_to :booster, optional: true
+  belongs_to :sealed, optional: true
 
   def self.create_from_mtg_card(card, booster)
     booster.cards.build.tap do |new_card|

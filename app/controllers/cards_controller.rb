@@ -1,11 +1,11 @@
 class CardsController < ApplicationController
   def index
-    @cards = booster.cards
+    @cards = scope.cards
   end
 
   private
 
-  def booster
-    @booster ||= Booster.find(params[:booster_id])
+  def scope
+    @scope ||= params[:scope].constantize.find(params[:scope_id])
   end
 end

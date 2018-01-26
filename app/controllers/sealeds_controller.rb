@@ -3,9 +3,17 @@ class SealedsController < ApplicationController
     @sets = CardSet.where(set_type: 'expansion').order(release_date: :desc) 
   end
 
+  def show
+    @sealed = Sealed.find(params[:id])
+
+    redirect_to cards_path(scope: "Sealed", scope_id: params[:id])
+  end
+
   def create
-    @cards = Sealed::Create.perform(sets)   
-    render :show
+    sealed = Sealed.create
+    @cards = Sealeds::Create.perform(sets, sealed)
+
+    redirect_to sealed
   end
 
   private
