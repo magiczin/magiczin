@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180121190448) do
+ActiveRecord::Schema.define(version: 20180126004858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 20180121190448) do
     t.string "set"
     t.string "set_name"
     t.bigint "booster_id"
+    t.integer "multiverse_id"
     t.index ["booster_id"], name: "index_cards_on_booster_id"
   end
 

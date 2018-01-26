@@ -2,7 +2,7 @@
   <% @cards.each do |card| %>
     <div class='column'>
       <div class='card'>
-        <h5><%= "#{card.name} #{card.mana_cost}"%></h5>
+        <a href=<%= card.multiverse_url %>><%= "#{card.name} #{card.mana_cost}"%></a>
         <p class='card-type'><%= card.card_type %></p>
         <img src=<%=card.image_url %>></img>
       </div>

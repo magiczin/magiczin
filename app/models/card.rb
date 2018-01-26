@@ -1,4 +1,5 @@
 class Card < ApplicationRecord
+  MULTIVERSE_CARD_BASE_URL = "http://gatherer.wizards.com/Pages/Card/Details.aspx".freeze
   belongs_to :booster, optional: true
 
   def self.create_from_mtg_card(card, booster)
@@ -15,7 +16,12 @@ class Card < ApplicationRecord
   def self.attributes_from_mtg_card
     %i[
       name mana_cost cmc colors supertypes subtypes rarity text flavor
-      power toughness loyalty rulings image_url set set_name
+      power toughness loyalty rulings image_url set set_name multiverse_id
     ]
+  end
+
+  # @todo Move to presenter
+  def multiverse_url
+    "#{MULTIVERSE_CARD_BASE_URL}?multiverseid=#{multiverse_id}"
   end
 end
