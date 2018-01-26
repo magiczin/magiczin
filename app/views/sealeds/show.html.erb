@@ -1,5 +1,5 @@
-<% @cards.each do |name, quantity| %>
-  <%= quantity %>
-  <%= name %>
-  <br />
-<% end %>
+<div style='float: right; padding-top: 15px'>
+  <%= link_to 'Exportar para TXT', export_sealed_path(@sealed) %>
+</div>
+
+<%= render 'common/card', cards: @sealed.cards %>

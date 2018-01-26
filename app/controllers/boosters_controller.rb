@@ -6,8 +6,6 @@ class BoostersController < ApplicationController
 
   def show
     @booster = Booster.find(params[:id])
-
-    redirect_to cards_path(scope: "Booster", scope_id: params[:id])
   end
 
   def create
@@ -16,6 +14,13 @@ class BoostersController < ApplicationController
     Boosters::CreateCards.perform(set_code, booster)
 
     redirect_to booster
+  end
+
+  def export
+    cards = Card.where(booster_id: params[:id])
+    @cards = Exporters::Text.perform(cards)
+
+    render 'common/export'
   end
 
   private
