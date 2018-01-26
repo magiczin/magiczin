@@ -1,9 +1,11 @@
-<h2>Cards</h2>
-<h6 style="color: red">This URL will self-destruct in 1 hour.</h6>
-<% @cards.each do |card| %>
-  <p><%= card.name %></p>
-  <img src=<%=card.image_url %>></img>
-  <p><%= card.card_type %></p>
-  <p><%= card.text %></p>
-  <br>
-<% end %>
+<div class='ui stackable four column grid container'>
+  <% @cards.each do |card| %>
+    <div class='column'>
+      <div class='card'>
+        <h5><%= "#{card.name} #{card.mana_cost}"%></h5>
+        <p class='card-type'><%= card.card_type %></p>
+        <img src=<%=card.image_url %>></img>
+      </div>
+    </div>
+  <% end %>
+</div>
