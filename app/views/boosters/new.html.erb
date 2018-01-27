@@ -1,6 +1,6 @@
 <h2>Generate Booster</h2>
 
 <%= form_for @booster do |f| %>
-  <%= f.collection_select :card_set_id, @sets, :id, :name, {}, class: 'ui search dropwdown'%>
+  <%= f.collection_select :card_set_id, @sets, :id, :name, {}, class: 'ui search dropdown' %>
   <%= f.submit %>
 <% end %>

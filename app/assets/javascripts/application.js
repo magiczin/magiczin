@@ -16,9 +16,4 @@
 //= require semantic-ui
 //
 //
-//= require cards
 //= require_tree .
-
-  $(document).on('turbolinks:load', function(){
-    $('.ui, .dropdown').dropdown();
-  })
