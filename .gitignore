@@ -21,3 +21,6 @@
 *.swp
 .tool-versions
 dump.rdb
+docker-compose.yml
+.env
+.envrc
