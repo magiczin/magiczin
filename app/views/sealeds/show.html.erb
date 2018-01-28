@@ -13,9 +13,9 @@
         <div class="item">
           <a class="title">
             <i class="dropdown icon"></i>
-            <h3><%= t :deck, count: @cards.count %></h3>
+            <h3><%= t ".deck", count: @cards.count %></h3>
           </a>
-          <div class="deck content menu active">
+          <div class="content menu active">
             <% @cards.each do |card| %>
               <p class="side-deck card" data-id=<%= card.id %>><%= card.name %></p>
             <% end %>
@@ -24,9 +24,9 @@
         <div class="item">
           <a class="title">
             <i class="dropdown icon"></i>
-            <h3><%= t :junk %></h3>
+            <h3><%= t ".junk", count: 0 %></h3>
           </a>
-          <div class="junk content menu active">
+          <div class="content menu active">
           </div>
         </div>
       </div>

@@ -1,4 +1,9 @@
 en:
+  sealeds:
+    show:
+      deck: "Deck (%{count})"
+      junk: "Deck (%{count})"
+
   helpers:
     submit:
       sealed:
