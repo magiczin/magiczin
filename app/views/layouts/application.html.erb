@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MtgDraft</title>
+    <title>MTG Draft</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,16 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <%= "#{current_user.first_name} #{current_user.last_name}" %>
+      <br />
+      <br />
+      <%= link_to "Booster Draft", new_booster_path %>
+      <br />
+      <%= link_to "Sealed", new_sealed_path %>
+    <% else %>
+      <a href="/auth/google">Sign in with Google</a>
+    <% end %>
     <%= yield %>
   </body>
 </html>
