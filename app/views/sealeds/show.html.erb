@@ -1,15 +1,18 @@
-<div class='ui visible sidebar inverted vertical menu'>
-  <h3 class='sidebar title'>Deck</h3>
-   <% @cards.each do |card| %>
-     <p class='sidebar card name' data-id=<%= card.id %>><%= card.name %></p>
-   <% end %>
-</div>
-
-<div class='ui container'>
-  <%= form_for @sealed, url: export_sealed_path(@sealed), method: 'post' do |f| %>
-    <div style='float: right; padding-top: 15px'>
-      <%= submit_tag 'Exportar para TXT' %>
+<%= form_for @sealed, url: export_sealed_path(@sealed), method: 'post' do |f| %>
+<div class="ui grid">
+    <div class="thirteen wide column">
+      <div class='ui container'>
+        <%= render 'common/card', cards: @cards %>
+      </div>
     </div>
-    <%= render 'common/card', cards: @cards %>
-  <% end %>
+    <div class="three wide column">
+      <h3>Deck</h3>
+      <%= submit_tag 'Exportar para TXT' %>
+      <br>
+      <br>
+      <% @cards.each do |card| %>
+        <p data-id=<%= card.id %>><%= card.name %></p>
+      <% end %>
+    </div>
 </div>
+<% end %>
