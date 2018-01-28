@@ -1,18 +1,35 @@
 <%= form_for @sealed, url: export_sealed_path(@sealed), method: 'post' do |f| %>
 <div class="ui grid">
-    <div class="thirteen wide column">
-      <div class='ui container'>
-        <%= render 'common/card', cards: @cards %>
+  <div class="thirteen wide column">
+    <div class='ui container'>
+      <%= render 'common/card', cards: @cards %>
+    </div>
+  </div>
+  <div class="three wide column centered">
+    <div class="ui container center aligned">
+      <%= f.button type: :submit, class: "ui black basic button" %>
+    </div>
+    <div class="ui vertical following fluid accordion text menu">
+      <div class="item">
+        <a class="title">
+          <i class="dropdown icon"></i>
+          <h3><%= t :deck, count: @cards.count %></h3>
+        </a>
+        <div class="content menu active">
+          <% @cards.each do |card| %>
+          <p data-id=<%= card.id %>><%= card.name %></p>
+          <% end %>
+        </div>
+      </div>
+      <div class="item">
+        <a class="title">
+          <i class="dropdown icon"></i>
+          <h3><%= t :junk %></h3>
+        </a>
+        <div class="content menu">
+        </div>
       </div>
     </div>
-    <div class="three wide column">
-      <h3>Deck</h3>
-      <%= submit_tag 'Exportar para TXT' %>
-      <br>
-      <br>
-      <% @cards.each do |card| %>
-        <p data-id=<%= card.id %>><%= card.name %></p>
-      <% end %>
-    </div>
+  </div>
 </div>
 <% end %>
