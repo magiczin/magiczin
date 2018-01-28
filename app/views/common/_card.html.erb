@@ -2,7 +2,7 @@
   <% cards.each do |card| %>
     <div class='column'>
       <div class='card' id=<%= "card_#{card.id}" %> data-id=<%= card.id %>>
-        <%= link_to "#{card.name} #{card.mana_cost}", card.multiverse_url %>
+        <%= link_to "#{card.name} #{card.mana_cost}", card.multiverse_url, class: 'card-name' %>
         <p class='card-type'><%= card.card_type %></p>
         <%= image_tag card.image_url, id: "image_#{card.id}", class: 'card-image' %>
         <%= check_box_tag "checkbox_#{card.id}", '1', true, class: 'hidden', 'data-id': card.id %>
