@@ -2,7 +2,7 @@ en:
   sealeds:
     show:
       deck: "Deck (%{count})"
-      junk: "Deck (%{count})"
+      junk: "Junk (%{count})"
 
   helpers:
     submit:
