@@ -17,7 +17,10 @@
           </a>
           <div class="content menu active">
             <% @cards.each do |card| %>
-              <p class="side-deck card" data-id=<%= card.id %>><%= card.name %></p>
+              <p class="side-deck side-card card-preview" data-thumbnail-src=<%= card.image_url %> data-id=<%= card.id %>>
+                <%= card.name %>
+                <%= image_tag card.image_url %>
+              </p>
             <% end %>
           </div>
         </div>

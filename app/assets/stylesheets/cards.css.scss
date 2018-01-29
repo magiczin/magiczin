@@ -2,3 +2,23 @@
   font-style: italic;
   font-size: 0.8em;
 }
+
+.card-preview {
+  position: relative;
+}
+
+.card-preview img {
+  position: absolute;
+  top: 80%;
+  right: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%);
+  transition-duration: 100ms;
+}
+
+.card-preview:hover img {
+  opacity: 1;
+  z-index: 999;
+  transition-duration: 100ms; 
+}
