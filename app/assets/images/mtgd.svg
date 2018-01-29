@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128mm"
+   height="128mm"
+   viewBox="0 0 453.54331 453.54331"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="mtgd.svg">
+  <defs
+     id="defs4">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3540">
+      <rect
+         style="opacity:0.01000001;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.05958533;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3542"
+         width="101.44041"
+         height="98.101707"
+         x="-1.6120712"
+         y="-0.32136822" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3544">
+      <rect
+         style="opacity:0.01000001;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.05958533;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3546"
+         width="101.44041"
+         height="98.101707"
+         x="-0.79857922"
+         y="0.17901033" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3548">
+      <rect
+         style="opacity:0.01000001;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.05958533;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3550"
+         width="101.44041"
+         height="98.101707"
+         x="-3.0971348"
+         y="0.81566036" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3552">
+      <rect
+         style="opacity:0.01000001;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.05958533;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3554"
+         width="101.44041"
+         height="98.101707"
+         x="-1.3885548"
+         y="0.71516031" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath3556">
+      <rect
+         style="opacity:0.01000001;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:2.05958533;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3558"
+         width="101.44041"
+         height="98.101707"
+         x="-2.9550149"
+         y="-0.28691965" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.25"
+     inkscape:cx="620.62995"
+     inkscape:cy="390.86869"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="704"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-598.81889)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.66292572px;line-height:125%;font-family:Freshman;-inkscape-font-specification:Freshman;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="14.402694"
+       y="929.64764"
+       id="text3560"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3562"
+         x="14.402694"
+         y="929.64764"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:266.60681152px;font-family:'Comic Runes';-inkscape-font-specification:'Comic Runes'">MTGD</tspan></text>
+  </g>
+</svg>
