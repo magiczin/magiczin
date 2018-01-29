@@ -9,9 +9,7 @@ class BoostersController < ApplicationController
   end
 
   def create
-    booster = Booster.create
-    set_code = CardSet.find(booster_params[:card_set_id]).code
-    Boosters::CreateCards.perform(set_code, booster)
+    booster = Boosters::Create.new(set_id).perform
 
     redirect_to booster
   end
@@ -28,6 +26,10 @@ class BoostersController < ApplicationController
   def booster_params
     params.require(:booster).permit(:card_set_id) 
     params[:booster]
+  end
+
+  def set_id
+    booster_params[:card_set_id]
   end
 
   def cards_for_export
