@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MTG Draft</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="ui vertical center aligned segment full-height">
+      <div class="ui middle aligned text content">
+        <h1 class="ui header">
+          MTG Draft
+        </h1>
+        <h2>Open a sealed to build your deck or draft a deck with your friends</h2>
+        <a href="/auth/google">
+          <div class="ui huge google plus button">
+            <i class="right google icon"></i>
+            &nbsp;
+            Sign with Gooogle
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,4 @@
 <h2>Generate Sealed</h2>
-
 <%= form_tag controller: :sealeds, action: :create, method: :post do %>
   <%= select_tag :set1, options_from_collection_for_select(@sets, :id, :name), class: 'ui search dropdown' %>
   <br />
@@ -14,5 +13,5 @@
   <%= select_tag :set6, options_from_collection_for_select(@sets, :id, :name), class: 'ui search dropdown' %>
   <br />
   <br />
-  <%= submit_tag "Get cards" %>
+  <%= button_tag t(".get_cards"), class: "ui black button" %>
 <% end %>

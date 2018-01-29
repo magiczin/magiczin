@@ -1,4 +1,6 @@
 class BoostersController < ApplicationController
+  before_action :authenticate
+
   def new
     @sets = CardSet.where(set_type: 'expansion').order(release_date: :desc)
     @booster = Booster.new

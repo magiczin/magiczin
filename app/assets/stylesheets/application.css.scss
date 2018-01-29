@@ -16,6 +16,10 @@
  *= require cards
  */
 
+body > main {
+  padding: 0 16px;
+}
+
 .hidden {
   display: none;
 }
@@ -24,4 +28,8 @@
   border-bottom: none;
   padding: 0;
   padding-bottom: 10px;
+}
+
+.full-height {
+  height: 100%;
 }

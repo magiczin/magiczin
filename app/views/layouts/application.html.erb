@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="top-bar ui secondary pointing segment menu">
+    <header class="top-bar ui secondary pointing segment menu">
       <% if current_user %>
       <%= link_to "Booster Draft", new_booster_path, class: "item #{active_class(:boosters)}" %>
           <%= link_to "Sealed", new_sealed_path, class: "item #{active_class(:sealeds)}" %>
@@ -34,7 +34,9 @@
       <% else %>
         <a href="/auth/google">Sign in with Google</a>
       <% end %>
-    </div>
-    <%= yield %>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

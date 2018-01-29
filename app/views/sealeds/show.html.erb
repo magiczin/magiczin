@@ -1,8 +1,8 @@
-<%= form_for @sealed, url: export_sealed_path(@sealed), method: 'post' do |f| %>
+<%= form_for @sealed, url: export_sealed_path(@sealed), method: "post" do |f| %>
   <div class="ui grid">
     <div class="thirteen wide column">
-      <div class='ui container'>
-        <%= render 'common/card', cards: @cards %>
+      <div class="ui container">
+        <%= render "common/card", cards: @cards %>
       </div>
     </div>
     <div class="three wide column centered">
