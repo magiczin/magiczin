@@ -7,7 +7,7 @@ class SealedsController < ApplicationController
 
   def show
     @sealed = Sealed.find(params[:id])
-    @cards = @sealed.cards.order(:colors, :cmc, :name)
+    @cards = @sealed.ordered_cards
   end
 
   def create
