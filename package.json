@@ -1,7 +1,27 @@
 {
   "name": "mtg_draft",
   "private": true,
+  "scripts": {
+    "test": "jest spec/javascripts"
+  },
+  "jest": {
+    "roots": [
+      "spec/javascripts"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app/javascripts"
+    ]
+  },
   "dependencies": {
     "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.1.0",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^22.1.4"
   }
 }
