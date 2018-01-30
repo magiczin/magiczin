@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'mtg_sdk', '~> 3.2'
 gem 'sidekiq', '~> 5.0'
 gem 'omniauth-google-oauth2', '~> 0.5.3'
+gem 'scout_apm', '~> 2.4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
