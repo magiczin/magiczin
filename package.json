@@ -10,10 +10,11 @@
     ],
     "moduleDirectories": [
       "node_modules",
-      "app/javascripts"
+      "app/javascript/packs"
     ]
   },
   "dependencies": {
+    "@rails/webpacker": "^3.2.1",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
@@ -22,6 +23,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
-    "jest": "^22.1.4"
+    "jest": "^22.1.4",
+    "webpack-dev-server": "^2.11.1"
   }
 }

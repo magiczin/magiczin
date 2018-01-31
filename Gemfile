@@ -19,6 +19,7 @@ gem 'mtg_sdk', '~> 3.2'
 gem 'sidekiq', '~> 5.0'
 gem 'omniauth-google-oauth2', '~> 0.5.3'
 gem 'scout_apm', '~> 2.4'
+gem 'webpacker', '~> 3.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
