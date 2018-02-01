@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20180201211655) do
 
   create_table "boosters", force: :cascade do |t|
     t.bigint "card_set_id"
+    t.bigint "draft_id"
     t.index ["card_set_id"], name: "index_boosters_on_card_set_id"
+    t.index ["draft_id"], name: "index_boosters_on_draft_id"
   end
 
   create_table "card_sets", force: :cascade do |t|

@@ -1,9 +1,10 @@
 module Boosters
   class Create
-    attr_reader :set_code, :set_id
+    attr_reader :set_code, :set_id, :draft_id
 
-    def initialize(set_id)
+    def initialize(set_id, draft_id = nil)
       @set_id = set_id
+      @draft_id = draft_id
       @set_code = find_set_code
     end
 
@@ -18,7 +19,7 @@ module Boosters
     private
 
     def booster
-      @booster ||= Booster.create(card_set_id: set_id)
+      @booster ||= Booster.create(card_set_id: set_id, draft_id: draft_id)
     end
 
     def find_set_code
