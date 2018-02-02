@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180201211655) do
+ActiveRecord::Schema.define(version: 20180202001104) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,8 +56,17 @@ ActiveRecord::Schema.define(version: 20180201211655) do
   end
 
   create_table "drafts", force: :cascade do |t|
+    t.bigint "lobby_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["lobby_id"], name: "index_drafts_on_lobby_id"
+  end
+
+  create_table "lobbies", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.integer "number_of_players"
   end
 
   create_table "sealeds", force: :cascade do |t|
@@ -72,6 +81,10 @@ ActiveRecord::Schema.define(version: 20180201211655) do
     t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "lobby_id"
+    t.bigint "draft_id"
+    t.index ["draft_id"], name: "index_users_on_draft_id"
+    t.index ["lobby_id"], name: "index_users_on_lobby_id"
   end
 
 end

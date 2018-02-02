@@ -1,5 +1,5 @@
 <div class="ui three top attached steps" >
-  <div class="step">
+  <div class="active step">
     <i class="write icon"></i>
     <div class="content">
       <div class="title">Create a lobby</div>
@@ -7,7 +7,7 @@
     </div>
   </div>
 
-  <div class="active step">
+  <div class="disabled step">
     <i class="setting icon"></i>
     <div class="content">
       <div class="title">Draft settings</div>
@@ -24,12 +24,11 @@
   </div>
 </div>
 
-<h2>Create a Draft</h2>
-<%= form_for @draft do |f| %>
-  <%= select_tag :booster1, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
-  <%= select_tag :booster2, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
-  <%= select_tag :booster3, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
-  <br />
-  <br />
-  <%= f.button class: "ui black button" %>
+<%= form_for @lobby do |f| %>
+  <div class="ui attached segment">
+    <div class="ui input">
+      <%= f.text_field :name, placeholder: "Some lobby name" %>
+    </div>
+    <%= button_tag "Create", class: "ui black button" %>
+  </div>
 <% end %>

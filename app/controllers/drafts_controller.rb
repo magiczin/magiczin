@@ -6,7 +6,7 @@ class DraftsController < ApplicationController
   end
 
   def create
-    @draft = Draft.new
+    @draft = Draft.new(draft_params)
     booster_set_ids.map do |set_id|
       @draft.boosters.build(card_set_id: set_id)
     end
@@ -14,6 +14,10 @@ class DraftsController < ApplicationController
   end
 
   private
+
+  def draft_params
+    params.require(:draft).permit(:lobby_id)
+  end
   
   def booster_set_ids
     params.select { |k, _| k.starts_with?("booster") }.values

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   mount Sidekiq::Web => '/sidekiq'
   resources :drafts
+  resources :lobbies
 
   resources :boosters do
     post :export, on: :member
