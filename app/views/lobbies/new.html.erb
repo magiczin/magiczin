@@ -1,0 +1,34 @@
+<div class="ui three top attached steps" >
+  <div class="active step">
+    <i class="write icon"></i>
+    <div class="content">
+      <div class="title">Create a lobby</div>
+      <div class="description">Choose a name and number of players</div>
+    </div>
+  </div>
+
+  <div class="disabled step">
+    <i class="setting icon"></i>
+    <div class="content">
+      <div class="title">Draft settings</div>
+      <div class="description">Customize your draft experience</div>
+    </div>
+  </div>
+
+  <div class="disabled step">
+    <i class="clone icon"></i>
+    <div class="content">
+      <div class="title">Draft!</div>
+      <div class="description">Draft your deck!</div>
+    </div>
+  </div>
+</div>
+
+<%= form_for @lobby do |f| %>
+  <div class="ui attached segment">
+    <div class="ui input">
+      <%= f.text_field :name, placeholder: "Some lobby name" %>
+    </div>
+    <%= button_tag "Create", class: "ui black button" %>
+  </div>
+<% end %>

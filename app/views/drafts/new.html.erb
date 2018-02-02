@@ -1,0 +1,35 @@
+<div class="ui three top attached steps" >
+  <div class="step">
+    <i class="write icon"></i>
+    <div class="content">
+      <div class="title">Create a lobby</div>
+      <div class="description">Choose a name and number of players</div>
+    </div>
+  </div>
+
+  <div class="active step">
+    <i class="setting icon"></i>
+    <div class="content">
+      <div class="title">Draft settings</div>
+      <div class="description">Customize your draft experience</div>
+    </div>
+  </div>
+
+  <div class="disabled step">
+    <i class="clone icon"></i>
+    <div class="content">
+      <div class="title">Draft!</div>
+      <div class="description">Draft your deck!</div>
+    </div>
+  </div>
+</div>
+
+<h2>Create a Draft</h2>
+<%= form_for @draft do |f| %>
+  <%= select_tag :booster1, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
+  <%= select_tag :booster2, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
+  <%= select_tag :booster3, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
+  <br />
+  <br />
+  <%= f.button class: "ui black button" %>
+<% end %>
