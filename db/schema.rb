@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202001104) do
+ActiveRecord::Schema.define(version: 20180203194152) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20180202001104) do
   create_table "boosters", force: :cascade do |t|
     t.bigint "card_set_id"
     t.bigint "draft_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["card_set_id"], name: "index_boosters_on_card_set_id"
     t.index ["draft_id"], name: "index_boosters_on_draft_id"
   end
@@ -28,6 +30,8 @@ ActiveRecord::Schema.define(version: 20180202001104) do
     t.string "block"
     t.string "set_type"
     t.datetime "release_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "cards", force: :cascade do |t|
@@ -51,6 +55,8 @@ ActiveRecord::Schema.define(version: 20180202001104) do
     t.bigint "booster_id"
     t.integer "multiverse_id"
     t.bigint "sealed_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["booster_id"], name: "index_cards_on_booster_id"
     t.index ["sealed_id"], name: "index_cards_on_sealed_id"
   end
@@ -70,6 +76,8 @@ ActiveRecord::Schema.define(version: 20180202001104) do
   end
 
   create_table "sealeds", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

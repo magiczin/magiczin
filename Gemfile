@@ -26,6 +26,7 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'dotenv-rails'
 end
 
 group :development do
