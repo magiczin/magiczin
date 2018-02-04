@@ -7,18 +7,20 @@ end
 
 ruby '2.5.0'
 
-gem 'rails', '~> 5.1.4'
-gem 'pg', '~> 0.18'
-gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
-gem 'semantic-ui-sass'
-gem 'uglifier', '>= 1.3.0'
-gem 'turbolinks', '~> 5'
+gem 'draper', '~> 3.0'
+gem 'dry-struct', '~> 0.4'
 gem 'jbuilder', '~> 2.5'
 gem 'mtg_sdk', '~> 3.2'
-gem 'sidekiq', '~> 5.0'
 gem 'omniauth-google-oauth2', '~> 0.5.3'
+gem 'pg', '~> 0.18'
+gem 'puma', '~> 3.7'
+gem 'rails', '~> 5.1.4'
+gem 'sass-rails', '~> 5.0'
 gem 'scout_apm', '~> 2.4'
+gem 'semantic-ui-sass'
+gem 'sidekiq', '~> 5.0'
+gem 'turbolinks', '~> 5'
+gem 'uglifier', '>= 1.3.0'
 gem 'webpacker', '~> 3.0'
 
 group :development, :test do

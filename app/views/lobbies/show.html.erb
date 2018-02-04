@@ -24,17 +24,4 @@
   </div>
 </div>
 
-<div class="ui attached segment">
-  <%= form_for @draft do |f| %>
-    <%= select_tag :booster1, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
-    <%= select_tag :booster2, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
-    <%= select_tag :booster3, options_from_collection_for_select(@sets, :id, :name), class: "ui search dropdown" %>
-
-    <br />
-    <br />
-
-    <%= f.text_field :lobby_id, class: "hidden" %>
-
-    <%= f.button class: "ui black button" %>
-  <% end %>
-</div>
+<%= render_game_setup @lobby %>

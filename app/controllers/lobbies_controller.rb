@@ -1,25 +1,22 @@
 class LobbiesController < ApplicationController
   def new
-    @lobby = Lobby.new
+    @form = LobbyForm.new
   end
 
   def show
-    @lobby = Lobby.find(params[:id])
-    @sets = CardSet.where(set_type: 'expansion').order(release_date: :desc)
-    @draft = @lobby.drafts.build
-    3.times { @draft.boosters.build }
+    @lobby = Lobby.find(params[:id]).decorate
   end
 
   def create
-    @lobby = Lobby.new(lobby_params)
-    @lobby.save
+    @form = LobbyForm.new(lobby_params)
+    @form.save
 
-    redirect_to @lobby
+    redirect_to @form
   end
 
   private
 
   def lobby_params
-    params.require(:lobby).permit(:name, :number_of_players)
+    params.require(:lobby).permit(:name, :game_type, :number_of_players).to_h
   end
 end
