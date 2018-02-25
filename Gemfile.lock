@@ -123,6 +123,10 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.2)
     pg (0.21.0)
+    pg_search (2.1.2)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -248,6 +252,7 @@ DEPENDENCIES
   mtg_sdk (~> 3.2)
   omniauth-google-oauth2 (~> 0.5.3)
   pg (~> 0.18)
+  pg_search (~> 2.1)
   pry-byebug
   pry-rails
   puma (~> 3.7)

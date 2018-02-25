@@ -1,4 +1,6 @@
 class Card < ApplicationRecord
+  include PgSearch
+
   MULTIVERSE_CARD_BASE_URL = "http://gatherer.wizards.com/Pages/Card/Details.aspx".freeze
   ATTRIBUTES_FROM_API_CARD = %i[
     name mana_cost cmc colors supertypes subtypes rarity text flavor
@@ -7,6 +9,15 @@ class Card < ApplicationRecord
 
   belongs_to :booster, optional: true
   belongs_to :sealed, optional: true
+
+  pg_search_scope :search_by_name,
+                  against: {
+                    name: "A",
+                    text: "B"
+                  },
+                  using: {
+                    tsearch: { prefix: true }
+                  }
 
   def self.build_from_api_card(template)
     Card.new.tap do |new_card|
