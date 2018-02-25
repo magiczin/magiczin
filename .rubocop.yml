@@ -1,0 +1,57 @@
+AllCops:
+  TargetRubyVersion: 2.3
+  DisplayCopNames: true
+  Exclude:
+    - "src/spec/fixtures/**/*"
+    - "src/db/schema.rb"
+    - "src/db/migrate/*"
+
+Metrics/LineLength:
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#80-character-limits"
+  Max: 120
+
+Metrics/BlockLength:
+  Enabled: false
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Style/Alias:
+  EnforcedStyle: "prefer_alias_method"
+
+Style/AsciiComments:
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#english-comments"
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ParallelAssignment:
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#parallel-assignment"
+  Enabled: false
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: space
+
+Style/StringLiterals:
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#consistent-string-literals"
+  EnforcedStyle: double_quotes
+
+Style/PercentLiteralDelimiters:
+  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#percent-literal-braces"
+  PreferredDelimiters:
+    default: ()
+    '%i': '[]'
+    '%I': '[]'
+    '%r': '{}'
+    '%w': '[]'
+    '%W': '[]'
