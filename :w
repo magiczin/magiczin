@@ -1,0 +1,12 @@
+<div class='cards ui stackable five column grid container'>
+  <% @cards.each do |card| %>
+    <div class='column'>
+      <div class='card' id=<%= "card_#{card.id}" %> data-id=<%= card.id %>>
+        <%= link_to "#{card.name} #{card.mana_cost}", card_path(@card) %>
+        <p class='card-type'><%= card.card_type %></p>
+        <img src=<%=card.image_url %>></img>
+      </div>
+    </div>
+  <% end %>
+  <%= paginate @cards %>
+</div>

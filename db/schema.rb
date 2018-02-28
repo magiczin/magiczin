@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180203194152) do
+ActiveRecord::Schema.define(version: 20180225195821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,8 +57,16 @@ ActiveRecord::Schema.define(version: 20180203194152) do
     t.bigint "sealed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "types", array: true
+    t.jsonb "legalities", array: true
     t.index ["booster_id"], name: "index_cards_on_booster_id"
     t.index ["sealed_id"], name: "index_cards_on_sealed_id"
+  end
+
+  create_table "decks", force: :cascade do |t|
+    t.string "name"
+    t.integer "main_cards_ids", array: true
+    t.integer "sideboard_cards_ids", array: true
   end
 
   create_table "drafts", force: :cascade do |t|

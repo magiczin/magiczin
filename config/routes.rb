@@ -3,6 +3,9 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   root to: 'home#index'
   mount Sidekiq::Web => '/sidekiq'
+  resources :decks do
+    post :search
+  end
   resources :drafts
   resources :lobbies
 

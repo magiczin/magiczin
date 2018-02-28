@@ -1,0 +1,13 @@
+<%= form_with model: @decks do %>
+  <div class="ui top attached segment">
+    <div class="ui deck search">
+      <div class="ui icon input">
+        <input class="prompt" placeholder="Search for a card" type="text">
+        <i class="search icon"></i>
+      </div>
+      <div class="results"></div>
+    </div>
+  </div>
+<% end %>
+
+<%= render "cards_table" %>
