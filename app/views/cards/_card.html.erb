@@ -1,7 +1,7 @@
 <div class='column'>
   <div class='card' id=<%= "card_#{card.id}" %> data-id=<%= card.id %>>
-    <%= link_to card.title, card_path(card) %>
-    <p class='card-type'><%= card.card_type %></p>
-    <img src=<%=card.image_url %>></img>
+    <%= link_to card_path(card) do %>
+      <img class="card-image" src=<%=card.image_url %>></img>
+    <% end %>
   </div>
 </div>

@@ -11,6 +11,10 @@ class CardsSearch < Searchlight::Search
     query.full_text_search(full_text_search)
   end
 
+  def search_name
+    query.where("lower(name) = ?", name.downcase)
+  end
+
   def search_cmc
     query.where(cmc: cmc)
   end
@@ -20,6 +24,6 @@ class CardsSearch < Searchlight::Search
   end
 
   def search_card_type
-    query.where(card_type: card_type)
+    query.card_type_full_text_search(card_type)
   end
 end

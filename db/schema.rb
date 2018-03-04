@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20180304031054) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "types", array: true
-    t.jsonb "legalities", array: true
+    t.json "legalities"
     t.json "image_urls"
     t.string "printings", array: true
     t.index ["booster_id"], name: "index_cards_on_booster_id"

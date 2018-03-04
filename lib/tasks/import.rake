@@ -28,6 +28,8 @@ namespace :import do
     attrs_hash = card_attrs_hash(card, set)
     populate_attributes(attrs_hash, card_attrs, card)
     existant_card = Card.find_by_name(card["name"])
+    build_card_legalities(card, attrs_hash)
+
     if existant_card
       existant_card.printings << set["code"]
       existant_card.save
@@ -39,7 +41,7 @@ namespace :import do
   def card_attrs
     %w[
       name cmc colors supertypes subtypes text flavor
-      power toughness loyalty rulings types legalities
+      power toughness loyalty rulings types
     ]
   end
 
@@ -50,8 +52,19 @@ namespace :import do
       "set_name" => set["name"],
       "set" => set["code"],
       "multiverse_id" => card["multiverseid"],
-      "printings" => [set["code"]]
+      "printings" => [set["code"]],
+      "legalities" => {}
     }
+  end
+
+  def build_card_legalities(card, attrs_hash)
+    return if card["legalities"].nil?
+    card["legalities"].map do |legality_hash|
+      format = legality_hash["format"]
+      legality = legality_hash["legality"]
+
+      attrs_hash["legalities"][format] = legality
+    end
   end
 
   def populate_attributes(attributes_hash, attributes, object_json)

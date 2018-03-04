@@ -11,16 +11,17 @@ class Card < ApplicationRecord
   belongs_to :booster, optional: true
   belongs_to :sealed, optional: true
 
+  pg_search_scope :card_type_full_text_search, against: :card_type,
+                                               using: { tsearch: { prefix: true } },
+                                               order_within_rank: "cards.colors"
   pg_search_scope :full_text_search,
                   against: {
                     name: "A",
                     subtypes: "B",
                     text: "C"
                   },
-                  using: {
-                    tsearch: { prefix: true }
-                  },
-                  order_within_rank: "cards.name"
+                  using: { tsearch: { prefix: true } },
+                  order_within_rank: "cards.colors"
 
   def self.build_from_api_card(template)
     Card.new.tap do |new_card|
