@@ -6,6 +6,7 @@ class Card < ApplicationRecord
     name mana_cost cmc colors supertypes subtypes rarity text flavor
     power toughness loyalty rulings image_url set set_name multiverse_id
   ].freeze
+  CARD_COLORS = %w[Black Blue Green Red White].freeze
 
   belongs_to :booster, optional: true
   belongs_to :sealed, optional: true

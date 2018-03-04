@@ -1,7 +1,8 @@
 class CardsController < ApplicationController
   def index
     @search = CardsSearch.new(search_params)
-    @cards = @search.results.page(params[:page])
+    @cards = @search.results.page(params[:page]).decorate
+
     respond_to do |format|
       format.html
       format.json { render json: @cards }

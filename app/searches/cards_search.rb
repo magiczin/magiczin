@@ -15,6 +15,10 @@ class CardsSearch < Searchlight::Search
     query.where(cmc: cmc)
   end
 
+  def search_colors
+    query.where("colors @> ARRAY[?]", colors)
+  end
+
   def search_card_type
     query.where(card_type: card_type)
   end

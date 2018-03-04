@@ -11,13 +11,15 @@ gem "rails", "~> 5.1.4"
 
 gem "pg", "~> 0.18"
 
+gem "mtg_sdk", "~> 3.2"
+
 gem "kaminari", "~> 1.1"
 gem "pg_search", "~> 2.1"
 gem "searchlight", "~> 4.1"
 
 gem "bootsnap", "~> 1", require: false
+
 gem "jbuilder", "~> 2.5"
-gem "mtg_sdk", "~> 3.2"
 gem "omniauth-google-oauth2", "~> 0.5.3"
 gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
@@ -27,6 +29,8 @@ gem "sidekiq", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 gem "webpacker", "~> 3.0"
+
+gem "draper", "~> 3.0"
 
 group :development, :test do
   gem "awesome_print"

@@ -1,15 +1,16 @@
 <%= form_for @search, url: cards_path, method: "get" do |f| %>
   <%= f.label :full_text_search %>
   <%= f.text_field :full_text_search %>
-  <br />
+
   <%= f.label :cmc %>
   <%= f.select :cmc, options_for_select(0..17), include_blank: true %>
 
-
+  <br />
   <%= f.label :card_type %>
   <%= f.text_field :card_type %>
 
-
+  <br />
+  <%= f.select :colors, options_for_colors_select, {}, class: "ui search dropdown", multiple: "" %>
 
   <%= f.submit "Search" %>
 <% end %>
@@ -18,7 +19,7 @@
   <% @cards.each do |card| %>
     <div class='column'>
       <div class='card' id=<%= "card_#{card.id}" %> data-id=<%= card.id %>>
-        <%= link_to "#{card.name} #{card.mana_cost}", card_path(card) %>
+        <%= link_to card.title, card_path(card) %>
         <p class='card-type'><%= card.card_type %></p>
         <img src=<%=card.image_url %>></img>
       </div>
