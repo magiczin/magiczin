@@ -31,14 +31,4 @@ class Card < ApplicationRecord
       new_card.card_type = template.type
     end
   end
-
-  # @todo Move to presenter
-  def multiverse_url
-    "#{MULTIVERSE_CARD_BASE_URL}?multiverseid=#{multiverse_id}"
-  end
-
-  # @todo Move to presenter
-  def image_url
-    "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=#{multiverse_id}&type=card"
-  end
 end

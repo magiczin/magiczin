@@ -16,14 +16,6 @@
 <% end %>
 
 <div class='cards ui stackable five column grid container'>
-  <% @cards.each do |card| %>
-    <div class='column'>
-      <div class='card' id=<%= "card_#{card.id}" %> data-id=<%= card.id %>>
-        <%= link_to card.title, card_path(card) %>
-        <p class='card-type'><%= card.card_type %></p>
-        <img src=<%=card.image_url %>></img>
-      </div>
-    </div>
-  <% end %>
+  <%= render partial: "card", collection: @cards %>
   <%= paginate @cards %>
 </div>

@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180225195821) do
+ActiveRecord::Schema.define(version: 20180304031054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "boosters", force: :cascade do |t|
     t.bigint "card_set_id"
@@ -49,7 +50,6 @@ ActiveRecord::Schema.define(version: 20180225195821) do
     t.integer "toughness"
     t.integer "loyalty"
     t.text "rulings"
-    t.string "image_url"
     t.string "set"
     t.string "set_name"
     t.bigint "booster_id"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20180225195821) do
     t.datetime "updated_at", null: false
     t.text "types", array: true
     t.jsonb "legalities", array: true
+    t.json "image_urls"
+    t.string "printings", array: true
     t.index ["booster_id"], name: "index_cards_on_booster_id"
     t.index ["sealed_id"], name: "index_cards_on_sealed_id"
   end
