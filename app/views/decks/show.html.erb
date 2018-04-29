@@ -1,0 +1,8 @@
+<h3>Types</h3>
+<%= pie_chart @cards.group(:types).count %>
+<h3>CMC</h3>
+<%= line_chart @cards.where.not("types @> ARRAY[?]", "Land").group(:cmc).count %>
+<h3>Colors</h3>
+<%= column_chart @cards.group(:colors).count %>
+<h3>Sample Hand</h3>
+<%= @cards.sample(7).pluck(:name) %>

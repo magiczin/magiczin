@@ -17,6 +17,8 @@ gem "kaminari", "~> 1.1"
 gem "pg_search", "~> 2.1"
 gem "searchlight", "~> 4.1"
 
+gem "chartkick"
+
 gem "bootsnap", "~> 1", require: false
 
 gem "jbuilder", "~> 2.5"

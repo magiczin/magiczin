@@ -53,6 +53,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (9.1.0)
+    chartkick (2.3.4)
     coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
@@ -275,6 +276,7 @@ DEPENDENCIES
   awesome_print
   bootsnap (~> 1)
   byebug
+  chartkick
   dotenv-rails
   draper (~> 3.0)
   jbuilder (~> 2.5)

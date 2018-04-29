@@ -11,6 +11,9 @@ class Card < ApplicationRecord
   belongs_to :booster, optional: true
   belongs_to :sealed, optional: true
 
+  has_many :deck_cards
+  has_many :decks, through: :deck_cards
+
   pg_search_scope :card_type_full_text_search, against: :card_type,
                                                using: { tsearch: { prefix: true } },
                                                order_within_rank: "cards.colors"
