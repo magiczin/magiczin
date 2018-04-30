@@ -1,0 +1,32 @@
+//deck-1
+2 Hedron Crawler
+2 Titan's Presence
+4 Matter Reshaper
+4 Glimmerpost
+2 Quicksilver Amulet
+4 Sol Ring
+2 Oblivion Sower
+2 Endbringer
+2 Eldrazi Mimic
+4 Thought-Knot Seer
+4 Vesuva
+2 Eye of Ugin
+4 Eldrazi Temple
+4 Cloudpost
+3 Urza's Incubator
+4 Expedition Map
+2 All Is Dust
+1 Ulamog, the Infinite Gyre
+2 Ulamog's Crusher
+1 Pathrazer of Ulamog
+1 Kozilek, Butcher of Truth
+2 It That Betrays
+1 Emrakul, the Aeons Torn
+1 Artisan of Kozilek
+
+//sideboard-1
+2 Spawnsire of Ulamog
+2 Not of This World
+2 Skittering Invasion
+5 Mountain
+10 Plains

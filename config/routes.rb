@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
   resources :decks do
     post :search
+    get :card_types
+    get :mana_curve
   end
   resources :drafts
   resources :lobbies

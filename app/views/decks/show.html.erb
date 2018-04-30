@@ -1,8 +1,17 @@
-<h3>Types</h3>
-<%= pie_chart @cards.group(:types).count %>
-<h3>CMC</h3>
-<%= line_chart @cards.where.not("types @> ARRAY[?]", "Land").group(:cmc).count %>
-<h3>Colors</h3>
-<%= column_chart @cards.group(:colors).count %>
-<h3>Sample Hand</h3>
-<%= @cards.sample(7).pluck(:name) %>
+<%  # @cards.group(:colors).count %>
+
+<div class="ui grid">
+  <div class="eight wide column">
+    <canvas id="card-types-chart"></canvas>
+  </div>
+  <div class="four wide column">
+    <canvas id="mana-costs-chart"></canvas>
+  </div>
+  <div class="four wide column">
+    <% @cards.sample(7).pluck(:name).each do |name| %>
+      <%= name %>
+      <br />
+    <% end %>
+  </div>
+</div>
+
