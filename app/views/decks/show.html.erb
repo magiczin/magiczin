@@ -1,17 +1,21 @@
 <%  # @cards.group(:colors).count %>
 
 <div class="ui grid">
-  <div class="eight wide column">
+  <div class="five wide column">
     <canvas id="card-types-chart"></canvas>
   </div>
   <div class="four wide column">
     <canvas id="mana-costs-chart"></canvas>
   </div>
-  <div class="four wide column">
-    <% @cards.sample(7).pluck(:name).each do |name| %>
-      <%= name %>
-      <br />
+</div>
+<div class="ui grid">
+  <h5>Sample Hand</h5>
+  <div class="ui row">
+    <% @cards.sample(7).each do |card| %>
+      <div class="two wide column">
+        <%= image_tag card.image_url, alt: "Image not available" %>
+        <br />
+      </div>
     <% end %>
   </div>
 </div>
-
