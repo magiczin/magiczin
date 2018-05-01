@@ -54,15 +54,33 @@ var drawManaCurveChart = function() {
     chartData = {
       labels: chartLabels,
       datasets: [{
-        label: 'Mana curve',
         data: chartValues,
         backgroundColor: colorPalette
       }]
     }
 
+    options = {
+      legend: {
+        display: false
+      },
+      tooltips: {
+        callbacks: {
+          title: function() {}
+        }
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            min: 0
+          }
+        }]
+      }
+    }
+
     var chart = new Chart(context, {
       type: 'bar',
-      data: chartData
+      data: chartData,
+      options: options
     })
   })
 }
