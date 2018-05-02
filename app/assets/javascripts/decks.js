@@ -1,6 +1,7 @@
 $(document).on('turbolinks:load', function() {
   drawTypesChart()
   drawManaCurveChart()
+  drawColorDistributionChart()
 })
 
 var drawTypesChart = function() {
@@ -81,6 +82,39 @@ var drawManaCurveChart = function() {
       type: 'bar',
       data: chartData,
       options: options
+    })
+  })
+}
+
+// @todo Chart colors should follow the color name
+var drawColorDistributionChart = function() {
+  var context = $('#color-distribution-chart')
+  var chartLabels, chartValues
+  $.ajax({
+    url: '1/color_distribution',
+    contentType: 'application/javascript',
+    dataType: 'json',
+  }
+  ).done(function(data){
+    chartLabels = Object.keys(data)
+    chartValues = Object.values(data)
+    var colorPalette = []
+    palette("tol-dv", chartLabels.length).map(function(color) {
+      colorPalette.push("#" + color)
+    })
+
+    chartData = {
+      labels: chartLabels,
+      datasets: [{
+        label: 'Color distribution',
+        data: chartValues,
+        backgroundColor: colorPalette
+      }]
+    }
+
+    var chart = new Chart(context, {
+      type: 'doughnut',
+      data: chartData
     })
   })
 }

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     post :search
     get :card_types
     get :mana_curve
+    get :color_distribution
   end
   resources :drafts
   resources :lobbies
